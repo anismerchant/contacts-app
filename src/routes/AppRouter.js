@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { LoginPage } from '../components/LoginPage';
+import LoginPage from '../components/LoginPage';
 
 const AppRouter = () => (
     <BrowserRouter>
