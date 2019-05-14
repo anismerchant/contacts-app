@@ -21,3 +21,11 @@ ReactDOM.render(jsx, document.getElementById('root'));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+firebase.auth().onAuthStateChanged( (user) => {
+    if (user) {
+        console.log('Logged In.')
+    } else {
+        console.log('Logged out')
+    }
+});
