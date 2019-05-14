@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It should correctly render Header. 1`] = `
+<header>
+  <h1>
+     Contacts App
+  </h1>
+  <button
+    onClick={[Function]}
+  >
+    Logout
+  </button>
+</header>
+`;
