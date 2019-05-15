@@ -1,6 +1,5 @@
 const filtersReducerDefaultState = {
-    firstName: '',
-    lastName: '',
+    name:'',
     email: undefined,
     cell: undefined,
     sortBy: 'firstname'
@@ -8,6 +7,11 @@ const filtersReducerDefaultState = {
 
 const filtersReducer = (state = filtersReducerDefaultState, action) => {
     switch (action.type) {
+        case 'SET_NAME_FILTER':
+            return {
+                ...state,
+                name: action.name
+            }
         default:
             return state;
     }
