@@ -1,12 +1,14 @@
 import uuid from 'uuid';
 
 // Add Contact
-export const addContact = ({firstname = 'Anoymous', lastname = 'Anoymous'} = {}) => ({
+export const addContact = ({firstname = 'Anoymous', lastname = 'Anoymous', email = undefined, cell = undefined} = {}) => ({
     type: 'ADD_CONTACT',
     contact: {
         id: uuid(),
         firstname,
-        lastname
+        lastname,
+        email,
+        cell
     }
 });
 
