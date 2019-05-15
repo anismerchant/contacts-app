@@ -1,10 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import { startLogout } from '../actions/auth';
 
 export const Header = ({startLogout}) => (
     <header>
         <h1> Contacts App</h1>
+        <NavLink exact to='/'>Dashboard</NavLink>
+        <NavLink to='/add'>Add Contact</NavLink>
+        <NavLink to='/feedback'>Feedback</NavLink>
         <button onClick={startLogout}>Logout</button>
     </header>
 );
