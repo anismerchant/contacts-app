@@ -4,11 +4,11 @@ import ContactListPerson from './ContactListPerson';
 import findContacts from '../selectors/findContacts';
 
 // de-structured props
-const ContactList = ({ contacts }) => (
+const ContactList = ({contacts}) => (
     <div>
         <h2>Contact List</h2>
         {contacts.length}
-        {contacts.map( (contact) => <ContactListPerson key={contact.id} {...contact} />)}
+        {contacts.map((contact) => <ContactListPerson key={contact.id} {...contact} />)}
     </div>
 );
 
@@ -18,4 +18,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(ContactList); 
+export default connect(mapStateToProps)(ContactList);
