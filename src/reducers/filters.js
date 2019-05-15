@@ -12,6 +12,16 @@ const filtersReducer = (state = filtersReducerDefaultState, action) => {
                 ...state,
                 name: action.name
             }
+        case 'SORT_BY_FIRST_NAME':
+            return {
+                ...state,
+                sortBy: 'firstname'
+            }
+        case 'SORT_BY_LAST_NAME':
+            return {
+                ...state,
+                sortBy: 'lastname'
+            }
         default:
             return state;
     }
