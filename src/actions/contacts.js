@@ -9,3 +9,9 @@ export const addContact = ({firstname = 'Anoymous', lastname = 'Anoymous'} = {})
         lastname
     }
 });
+
+// Remove Contact
+export const removeContact = ({id} = {}) => ({
+    type: 'REMOVE_CONTACT',
+    id
+})
