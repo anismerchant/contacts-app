@@ -14,4 +14,11 @@ export const addContact = ({firstname = 'Anoymous', lastname = 'Anoymous'} = {})
 export const removeContact = ({id} = {}) => ({
     type: 'REMOVE_CONTACT',
     id
-})
+});
+
+// Edit Contact
+export const editContact = (id, updates) => ({
+    type: 'EDIT_CONTACT',
+    id,
+    updates
+});

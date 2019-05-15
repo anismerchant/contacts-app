@@ -9,6 +9,12 @@ const contactsReducer = ( state = contactsReducerDefaultState, action) => {
             ];
         case 'REMOVE_CONTACT':
             return state.filter( ({id}) => id !== action.id );
+        case 'EDIT_CONTACT':
+            return state.map( (contact) => {
+                return (contact.id === action.id) 
+                ? {...contact, ...action.updates} 
+                : contact
+            });
         default:
             return state;
     }
