@@ -20,7 +20,7 @@ const AppRouter = () => (
                 <Route path='/dashboard' component={ContactDashboard} />
                 <Route path='/add' component={AddContact} />
                 <Route path='/edit/:id' component={EditContact} />
-                <Route pate='/feedback' component={Feedback} />
+                <Route path='/feedback' component={Feedback} />
                 <Route component={PageNotFound}  />
             </Switch>
         </div>
