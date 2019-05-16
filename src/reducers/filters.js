@@ -2,7 +2,7 @@ const filtersReducerDefaultState = {
     name:'',
     email: undefined,
     cell: undefined,
-    sortBy: 'firstname'
+    sortBy: ''
 };
 
 const filtersReducer = (state = filtersReducerDefaultState, action) => {
