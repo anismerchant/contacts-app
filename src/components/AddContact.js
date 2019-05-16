@@ -5,13 +5,14 @@ import { addContact } from '../actions/contacts'
 
 
 class AddContact extends Component  {
-    render(props) {
+    render() {
         return (
             <div>
                 <h3>Add Contact</h3>
                 <ContactForm 
                     onSubmit={ (contact) => {
                         this.props.dispatch(addContact(contact));
+                        this.props.history.push('/dashboard');
                     }}
                 />
             </div>
