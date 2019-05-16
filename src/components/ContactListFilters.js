@@ -1,10 +1,22 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { setNameFilter } from '../actions/filters';
 
-const ContactListFilters = () => (
+const ContactListFilters = (props) => (
     <div>
-        <input type="text" />
+        <input 
+            type="text" 
+            value={props.filters.name} 
+            onChange={(e) => props.dispatch(setNameFilter(e.target.value))}
+        />
     </div>
 
 );
 
-export default ContactListFilters;
+const mapStateToProps = (state) => {
+    return {
+        filters: state.filters
+    };
+};
+
+export default connect(mapStateToProps)(ContactListFilters);
