@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 
 class ContactForm extends Component {
-    state = {
-        firstname: '',
-        lastname: '',
-        email: '',
-        cell: '',
-        error:''
-    };
+    constructor(props) {
+        super(props);
+            this.state = {
+            firstname: props.contact ? props.contact.firstname : '',
+            lastname: props.contact ? props.contact.lastname : '',
+            email: props.contact ? props.contact.email : '',
+            cell: props.contact ? props.contact.cell : '',
+            error:''
+        };
+    }
 
     onFirstnameChange = (e) => {
         const firstname = e.target.value;
@@ -41,7 +44,6 @@ class ContactForm extends Component {
         }
 
     }
-
     render() {
         return (
             <div>
