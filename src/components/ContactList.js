@@ -6,7 +6,6 @@ import findContacts from '../selectors/findContacts';
 // de-structured props
 const ContactList = ({contacts}) => (
     <div>
-        <h2>Contact List</h2>
         {contacts.length}
         {contacts.map((contact) => <ContactListPerson key={contact.id} {...contact} />)}
     </div>
