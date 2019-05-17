@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { beginLogout } from '../actions/auth';
 
+// de-structured props
 export const Header = ({beginLogout}) => (
     <header>
         <h1> Contacts App</h1>
-        <NavLink exact to='/'>Home</NavLink>
-        <NavLink to='/dashboard'>Dashboard</NavLink>
+        <NavLink exact to='/'>Dashboard</NavLink>
         <NavLink to='/add'>Add Contact</NavLink>
         <NavLink to='/feedback'>Feedback</NavLink>
         <button onClick={beginLogout}>Logout</button>

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { beginLogin } from '../actions/auth';
 
+// de-structured props
 export const LoginPage = ({beginLogin}) => (
     <div>
         <button onClick={beginLogin}>Login</button>
