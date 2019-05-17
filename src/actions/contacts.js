@@ -48,6 +48,14 @@ export const editContact = (id, updates) => ({
     updates
 });
 
+export const beginEditContact = (id, updates) => {
+    return (dispatch) => {
+        return database.ref(`contacts/${id}`).update(updates).then( () => {
+            dispatch(editContact(id, updates))
+        })
+    }
+}
+
 // Delete
 export const removeContact = ({id} = {}) => ({
     type: 'REMOVE_CONTACT',

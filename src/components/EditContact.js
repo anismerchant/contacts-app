@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { editContact } from '../actions/contacts';
+import { beginEditContact } from '../actions/contacts';
 import ContactForm from './ContactForm';
 
 export class EditContact extends Component {
     onSubmit = (contact) => {
-        this.props.editContact(this.props.contact.id, contact);
+        this.props.beginEditContact(this.props.contact.id, contact);
         this.props.history.push('/dashboard');
     }
     render() {
@@ -25,7 +25,7 @@ const mapStateToProps = (state, props) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    editContact: (id, contact) => dispatch(editContact(id, contact))
+    beginEditContact: (id, contact) => dispatch(beginEditContact(id, contact))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(EditContact);
