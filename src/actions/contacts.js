@@ -1,6 +1,6 @@
 import database from '../firebase/firebase'
 
-// Add Contact
+// Create
 export const addContact = (contact) => ({
     type: 'ADD_CONTACT',
     contact
@@ -19,25 +19,11 @@ export const beginAddContact = ({firstname = '', lastname = '', email = '', cell
     };
 };
 
-// Remove Contact
-export const removeContact = ({id} = {}) => ({
-    type: 'REMOVE_CONTACT',
-    id
-});
-
-// Edit Contact
-export const editContact = (id, updates) => ({
-    type: 'EDIT_CONTACT',
-    id,
-    updates
-});
-
-// Set Contacts
+// Read 
 export const setContacts = (contacts) => ({
     type: 'SET_CONTACTS',
     contacts
 });
-
 
 export const beginSetContacts = () => {
     return (dispatch) => { 
@@ -52,5 +38,27 @@ export const beginSetContacts = () => {
             });
             dispatch(setContacts(contacts));
         });
+    };
+};
+
+// Update
+export const editContact = (id, updates) => ({
+    type: 'EDIT_CONTACT',
+    id,
+    updates
+});
+
+// Delete
+export const removeContact = ({id} = {}) => ({
+    type: 'REMOVE_CONTACT',
+    id
+});
+
+export const beginRemoveContact = ({id} = {}) => {
+    return (dispatch) => {
+        return database.ref(`contacts/${id}`).remove().then( () => {
+            dispatch(removeContact({ id }));
+        })
+     
     };
 };
