@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import ContactForm from './ContactForm';
 import { beginAddContact }  from '../actions/contacts'
 
-const AddContact = (props) => {
+export const AddContact = (props) => {
     return (
         <div>
             <h3>Add Contact</h3>
