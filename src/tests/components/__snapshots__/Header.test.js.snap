@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It should correctly render Header. 1`] = `
+<header>
+  <h1>
+     Contacts App
+  </h1>
+  <NavLink
+    exact={true}
+    to="/"
+  >
+    Home
+  </NavLink>
+  <NavLink
+    to="/dashboard"
+  >
+    Dashboard
+  </NavLink>
+  <NavLink
+    to="/add"
+  >
+    Add Contact
+  </NavLink>
+  <NavLink
+    to="/feedback"
+  >
+    Feedback
+  </NavLink>
+  <button
+    onClick={[Function]}
+  >
+    Logout
+  </button>
+</header>
+`;
