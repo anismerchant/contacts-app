@@ -7,7 +7,7 @@ import { beginLogout } from '../actions/auth';
 export const Header = ({beginLogout}) => (
     <header>
         <h1> Contacts App</h1>
-        <NavLink exact to='/'>Dashboard</NavLink>
+        <NavLink to='/dashboard'>Dashboard</NavLink>
         <NavLink to='/add'>Add Contact</NavLink>
         <NavLink to='/feedback'>Feedback</NavLink>
         <button onClick={beginLogout}>Logout</button>

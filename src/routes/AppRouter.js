@@ -8,6 +8,7 @@ import EditContact from '../components/EditContact';
 import Feedback from '../components/Feedback';
 import PageNotFound from '../components/PageNotFound';
 import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
 
 export const history = createBrowserHistory();
 
@@ -15,11 +16,11 @@ const AppRouter = () => (
     <Router history={history}>
         <div>
             <Switch>
-                <Route exact path='/' component={LoginPage} />
+                <PublicRoute exact path='/' component={LoginPage} />
                 <PrivateRoute path='/dashboard' component={ContactDashboard} />
                 <PrivateRoute path='/add' component={AddContact} />
                 <PrivateRoute path='/edit/:id' component={EditContact} />
-                <Route path='/feedback' component={Feedback} />
+                <PrivateRoute path='/feedback' component={Feedback} />
                 <Route component={PageNotFound}  />
             </Switch>
         </div>
