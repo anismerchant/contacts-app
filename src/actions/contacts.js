@@ -7,10 +7,11 @@ export const addContact = (contact) => ({
 });
 
 export const beginAddContact = ({firstname = '', lastname = '', email = '', cell = ''} = {}) => {
-    return (dispatch) => {
+    return (dispatch, getState) => {
+        const uid = getState().auth.uid;
         const contact = { firstname, lastname, email, cell }
 
-        return database.ref('contacts').push(contact).then( (ref) => {
+        return database.ref(`users/${uid}/contacts`).push(contact).then( (ref) => {
             dispatch(addContact({
                 id: ref.key,
                 ...contact
@@ -26,8 +27,9 @@ export const setContacts = (contacts) => ({
 });
 
 export const beginSetContacts = () => {
-    return (dispatch) => { 
-        return database.ref('contacts').once('value').then( (snapshot) => {
+    return (dispatch, getState) => {
+        const uid = getState().auth.uid; 
+        return database.ref(`users/${uid}/contacts`).once('value').then( (snapshot) => {
             const contacts = [];
 
             snapshot.forEach((childSnapshot) => {
@@ -49,8 +51,9 @@ export const editContact = (id, updates) => ({
 });
 
 export const beginEditContact = (id, updates) => {
-    return (dispatch) => {
-        return database.ref(`contacts/${id}`).update(updates).then( () => {
+    return (dispatch, getState) => {
+        const uid = getState().auth.uid; 
+        return database.ref(`users/${uid}/contacts/${id}`).update(updates).then( () => {
             dispatch(editContact(id, updates))
         })
     }
@@ -63,8 +66,9 @@ export const removeContact = ({id} = {}) => ({
 });
 
 export const beginRemoveContact = ({id} = {}) => {
-    return (dispatch) => {
-        return database.ref(`contacts/${id}`).remove().then( () => {
+    return (dispatch, getState) => {
+        const uid = getState().auth.uid; 
+        return database.ref(`users/${uid}/contacts/${id}`).remove().then( () => {
             dispatch(removeContact({ id }));
         })
      
