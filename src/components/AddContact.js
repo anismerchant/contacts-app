@@ -1,8 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ContactForm from './ContactForm';
-import { addContact } from '../actions/contacts'
-
+import { beginAddContact }  from '../actions/contacts'
 
 const AddContact = (props) => {
     return (
@@ -10,7 +9,7 @@ const AddContact = (props) => {
             <h3>Add Contact</h3>
             <ContactForm 
                 onSubmit={ (contact) => {
-                    props.dispatch(addContact(contact));
+                    props.dispatch(beginAddContact(contact));
                     props.history.push('/dashboard');
                 }}
             />

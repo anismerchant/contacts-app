@@ -1,16 +1,25 @@
 import uuid from 'uuid';
+import database from '../firebase/firebase'
 
 // Add Contact
-export const addContact = ({firstname = '', lastname = '', email = '', cell = ''} = {}) => ({
+export const addContact = (contact) => ({
     type: 'ADD_CONTACT',
-    contact: {
-        id: uuid(),
-        firstname,
-        lastname,
-        email,
-        cell
-    }
+    contact
 });
+
+export const beginAddContact = ({firstname = '', lastname = '', email = '', cell = ''} = {}) => {
+    return (dispatch) => {
+        const contact = { firstname, lastname, email, cell }
+
+        database.ref('contacts').push(contact)
+        .then( (ref) => {
+            dispatch(addContact({
+                id: ref.key,
+                ...contact
+            }));
+        });
+    };
+};
 
 // Remove Contact
 export const removeContact = ({id} = {}) => ({
