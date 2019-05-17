@@ -7,6 +7,8 @@ const contactsReducer = ( state = contactsReducerDefaultState, action) => {
                 ...state,
                 action.contact
             ];
+        case 'SET_CONTACTS':
+            return action.contacts;
         case 'REMOVE_CONTACT':
             return state.filter( ({id}) => id !== action.id );
         case 'EDIT_CONTACT':
