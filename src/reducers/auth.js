@@ -1,0 +1,16 @@
+const appAuthReducerDefaultState = {};
+
+const appAuthReducer = (state = appAuthReducerDefaultState, action) => {
+    switch (action.type) {
+        case 'LOGIN':
+            return {
+                uid: action.uid
+            }
+        case 'LOGOUT':
+            return {};
+        default:
+            return state;
+    }
+}
+
+export default appAuthReducer;
