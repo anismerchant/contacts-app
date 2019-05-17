@@ -6,7 +6,7 @@ import AppRouter from './routes/AppRouter';
 import * as serviceWorker from './serviceWorker';
 import { firebase } from './firebase/firebase';
 import './index.css';
-import { addContact } from './actions/contacts';
+// import { addContact } from './actions/contacts';
 
 const store = configureStore;
 
