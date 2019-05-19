@@ -7,7 +7,8 @@ import { beginSetContacts } from './actions/contacts';
 import { login, logout } from './actions/auth'
 import * as serviceWorker from './serviceWorker';
 import { firebase } from './firebase/firebase';
-import './index.css';
+import LoadingGif from './components/LoadingGif';
+import './styles/style.css';
 
 const store = configureStore;
 
@@ -25,7 +26,7 @@ const renderApp = () => {
     }
 }
 
-ReactDOM.render(<p>Loading...</p>, document.getElementById('root'));
+ReactDOM.render(<LoadingGif />, document.getElementById('root'));
 
 firebase.auth().onAuthStateChanged( (user) => {
     if (user) {
