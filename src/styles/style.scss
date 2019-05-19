@@ -1,0 +1,301 @@
+@import "_reset.scss";
+@import "_mixins.scss";
+@import "_variables.scss";
+
+// Loader Component
+.loading-gif__section {
+    @include displayFlexCenter();
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+
+    .loading-gif__section--img {
+        width: 4rem;
+        height: 4rem;
+        margin: 10rem auto;
+    }
+}
+
+// All App Components
+.container {
+    font-family: $site-font-family;
+    background-color: $background-color;
+    height: auto;
+
+    // Login Component
+    .login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background: url('/images/bg-login-page.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+    
+        .login--box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.2);
+            width: 70vw;
+            height: 20vh;
+
+            .login--title {
+                font-size: 1.6rem;
+                line-height: 3rem;
+            }
+
+            .login--tagline {
+                margin-bottom: 1rem;
+                font-size: 1.2rem;
+            }
+
+            .login--button-container {
+                position: abolute;
+            }
+
+            .login--button {
+                margin-right: 0.5rem;
+                padding: 0.4rem 0;
+                border-radius: 10px;
+                border: 1px $color-input solid;
+                width: 15rem;
+                height: 2.5rem;
+                font-size: 1rem;
+                font-weight: bold;
+                background-color: $logout-button;
+                text-align: center;
+                box-shadow: 0px 5px 0px rgb(130, 111, 0);
+                position: relative;
+                top: 0px;
+                transition: all ease 0.2s;
+            }
+            .login--button:active {
+                box-shadow: 0px 5px 0px rgb(130, 111, 0);
+                top:3px;
+            }
+        }
+        
+    }
+
+    // Header Component
+    header {
+        padding: 1rem;
+
+        .header--logo-area {
+            @include displayFlexCenter();
+            align-items: center;
+
+            .header--logo {
+                margin-right: 7rem;
+
+                h2 {
+                    font-size: 1.2rem;
+                    color: $color;
+                    font-weight: $font-weight-bold;
+                }
+            }
+            .header--logout {
+                margin-right: 0.5rem;
+                padding: 0.4rem 0;
+                border-radius: 5px;
+                border: 1px black solid;
+                width: 5rem;
+                font-size: 0.875rem;
+                background-color: $logout-button;
+                text-align: center;
+                box-shadow: 0px 2px 0px rgb(130, 111, 0);
+            }
+        }
+        .header--menu {
+            @include displayFlexCenter();
+            border-bottom: 1px solid black;
+            padding: 1rem 0;
+
+            .header--dashboard {
+                margin-right: 1rem;
+                text-decoration: none;
+                color: $color;
+            }            
+            .header--add-contact {
+                margin-right: 1rem;
+                text-decoration: none;
+                color: $color;
+            }
+            .header--feedback {
+                text-decoration: none;
+                color: $color;
+            }
+            .selected {
+                font-weight: bold;
+            }
+        }
+    }
+
+    // AddContact & EditContact Components 
+    .form__section {
+        @include displayFlexColumn();
+        align-items: center;
+
+        // ContactForm Component
+        .form--data {
+            margin-top: 1rem;
+        
+            form {
+                @include displayFlexColumn();
+
+                input[type='text'] {
+                    border: $border;
+                    padding-left: 0.4rem;
+                    height: 3rem;
+                    width: 20rem;
+                    background-color: $background-color-input;
+                    font-weight: $font-weight-bold;
+                    font-size: 1rem;
+                    color: $color-input;
+                    margin-top: 1rem; 
+                }
+                input[type='tel'] {
+                    border: $border;
+                    padding-left: 0.4rem;
+                    height: 3rem;
+                    width: 20rem;
+                    background-color: $background-color-input;
+                    font-weight: $font-weight-bold;
+                    font-size: 1rem;
+                    color: $color-input;
+                    margin: 1rem 0; 
+                }
+                .form-button {
+                    margin-right: 0.5rem;
+                    padding: 0.4rem 0;
+                    border-radius: 5px;
+                    width: 8rem;
+                    font-size: 0.875rem;
+                    font-weight: $font-weight-bold;
+                    background-color: $background-color;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    // ContactDashboard Component
+    .contact__section {
+        @include displayFlexColumn();
+        align-items: center;
+
+        // ContactListFilters Component
+        .contactlist--filters {
+            margin-top: 1rem;
+
+            input[type='text'] {
+                border: $border;
+                padding-left: 0.4rem;
+                height: 2rem;
+                background-color: $background-color-input;
+                font-weight: $font-weight-bold;
+                font-size: 1rem;
+                color: $color-input;
+            }
+            select {
+                border: $border;
+                padding-left: 0.4rem;
+                height: 2.1rem;
+                background-color: $background-color-input;
+                font-weight: $font-weight-bold;
+                font-size: 1rem;
+                color: $color-input;
+                margin-left: 0.5rem;
+            }
+        }
+
+        .contactlist__container {
+
+            // ContactList Component
+            .contact--stats {
+                .contact--number {
+                    font-weight: $font-weight-bold;
+                    color: $color;
+                }
+                width: 80%;
+                margin: 1rem auto;
+            }
+            .contact__cards {
+                @include displayFlexColumn();
+                
+                // ContactListPerson Component
+                .contact__cards--individual {
+                    border: 1px solid #D4D4D4;
+                    width: 80%;
+                    margin: 1rem auto;
+                    background-color: $background-color;
+
+                    h4 {
+                        padding-top: 0.5rem;
+                        padding-left: 0.5rem;
+                        color: $color;
+                    }
+
+                    p {
+                        padding-top: 0.5rem;
+                        padding-left: 0.5rem;
+                    }
+           
+                    .contact__cards--actions {
+                        display: flex;
+                        flex-direction: row;
+                        padding-top: 0.5rem;
+                        padding-left: 0.5rem;
+                        padding-bottom: 0.5rem;
+
+                        .contact__cards--edit {
+                            margin-right: 0.5rem;
+                            padding: 0.4rem 0;
+                            border-radius: 5px;
+                            width: 5rem;
+                            font-size: 0.875rem;
+                            font-weight: $font-weight-bold;
+                            background-color: $background-color;
+                        }
+                        .contact__cards--remove {
+                            margin-right: 0.5rem;
+                            padding: 0.4rem 0;
+                            border-radius: 5px;
+                            width: 5rem;
+                            font-size: 0.875rem;
+                            font-weight: $font-weight-bold;
+                            background-color: $background-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Feedback Component
+    .feedback__section {
+        @include displayFlexColumn();
+        align-items: center;
+    }
+
+    // PageNotFount Component
+    .page-not-found__section {
+        @include displayFlexColumn();
+        align-items: center;
+
+        .page-not-found__section--msg {
+            padding: 0 1.5rem;
+        }
+        .page-not-found__section--back-link {
+            margin-top: 1rem;
+        
+            a {
+                text-decoration: none;
+                color: $color
+            }
+        }
+    }
+}

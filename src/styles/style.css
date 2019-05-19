@@ -1,0 +1,441 @@
+/* GLOBAL RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Flexbox */
+/*** ALL DEVICES' VARIABLES ***/
+/* Typography & More */
+/* Colour Schemes */
+.loading-gif__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.loading-gif__section .loading-gif__section--img {
+  width: 4rem;
+  height: 4rem;
+  margin: 10rem auto;
+}
+
+.container {
+  font-family: "Roboto", sans-serif;
+  background-color: #FFFFFF;
+  height: auto;
+}
+
+.container .login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: url("/images/bg-login-page.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container .login .login--box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  width: 70vw;
+  height: 20vh;
+}
+
+.container .login .login--box .login--title {
+  font-size: 1.6rem;
+  line-height: 3rem;
+}
+
+.container .login .login--box .login--tagline {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.container .login .login--box .login--button-container {
+  position: abolute;
+}
+
+.container .login .login--box .login--button {
+  margin-right: 0.5rem;
+  padding: 0.4rem 0;
+  border-radius: 10px;
+  border: 1px #8E8585 solid;
+  width: 15rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #F3F3F3;
+  text-align: center;
+  -webkit-box-shadow: 0px 5px 0px #826f00;
+          box-shadow: 0px 5px 0px #826f00;
+  position: relative;
+  top: 0px;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+
+.container .login .login--box .login--button:active {
+  -webkit-box-shadow: 0px 5px 0px #826f00;
+          box-shadow: 0px 5px 0px #826f00;
+  top: 3px;
+}
+
+.container header {
+  padding: 1rem;
+}
+
+.container header .header--logo-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container header .header--logo-area .header--logo {
+  margin-right: 7rem;
+}
+
+.container header .header--logo-area .header--logo h2 {
+  font-size: 1.2rem;
+  color: blue;
+  font-weight: bold;
+}
+
+.container header .header--logo-area .header--logout {
+  margin-right: 0.5rem;
+  padding: 0.4rem 0;
+  border-radius: 5px;
+  border: 1px black solid;
+  width: 5rem;
+  font-size: 0.875rem;
+  background-color: #F3F3F3;
+  text-align: center;
+  -webkit-box-shadow: 0px 2px 0px #826f00;
+          box-shadow: 0px 2px 0px #826f00;
+}
+
+.container header .header--menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid black;
+  padding: 1rem 0;
+}
+
+.container header .header--menu .header--dashboard {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: blue;
+}
+
+.container header .header--menu .header--add-contact {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: blue;
+}
+
+.container header .header--menu .header--feedback {
+  text-decoration: none;
+  color: blue;
+}
+
+.container header .header--menu .selected {
+  font-weight: bold;
+}
+
+.container .form__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .form__section .form--data {
+  margin-top: 1rem;
+}
+
+.container .form__section .form--data form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .form__section .form--data form input[type='text'] {
+  border: 1px solid #D4D4D4;
+  padding-left: 0.4rem;
+  height: 3rem;
+  width: 20rem;
+  background-color: #F8F8F8;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #8E8585;
+  margin-top: 1rem;
+}
+
+.container .form__section .form--data form input[type='tel'] {
+  border: 1px solid #D4D4D4;
+  padding-left: 0.4rem;
+  height: 3rem;
+  width: 20rem;
+  background-color: #F8F8F8;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #8E8585;
+  margin: 1rem 0;
+}
+
+.container .form__section .form--data form .form-button {
+  margin-right: 0.5rem;
+  padding: 0.4rem 0;
+  border-radius: 5px;
+  width: 8rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+}
+
+.container .contact__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .contact__section .contactlist--filters {
+  margin-top: 1rem;
+}
+
+.container .contact__section .contactlist--filters input[type='text'] {
+  border: 1px solid #D4D4D4;
+  padding-left: 0.4rem;
+  height: 2rem;
+  background-color: #F8F8F8;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #8E8585;
+}
+
+.container .contact__section .contactlist--filters select {
+  border: 1px solid #D4D4D4;
+  padding-left: 0.4rem;
+  height: 2.1rem;
+  background-color: #F8F8F8;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #8E8585;
+  margin-left: 0.5rem;
+}
+
+.container .contact__section .contactlist__container .contact--stats {
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.container .contact__section .contactlist__container .contact--stats .contact--number {
+  font-weight: bold;
+  color: blue;
+}
+
+.container .contact__section .contactlist__container .contact__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .contact__section .contactlist__container .contact__cards .contact__cards--individual {
+  border: 1px solid #D4D4D4;
+  width: 80%;
+  margin: 1rem auto;
+  background-color: #FFFFFF;
+}
+
+.container .contact__section .contactlist__container .contact__cards .contact__cards--individual h4 {
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  color: blue;
+}
+
+.container .contact__section .contactlist__container .contact__cards .contact__cards--individual p {
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.container .contact__section .contactlist__container .contact__cards .contact__cards--individual .contact__cards--actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.container .contact__section .contactlist__container .contact__cards .contact__cards--individual .contact__cards--actions .contact__cards--edit {
+  margin-right: 0.5rem;
+  padding: 0.4rem 0;
+  border-radius: 5px;
+  width: 5rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  background-color: #FFFFFF;
+}
+
+.container .contact__section .contactlist__container .contact__cards .contact__cards--individual .contact__cards--actions .contact__cards--remove {
+  margin-right: 0.5rem;
+  padding: 0.4rem 0;
+  border-radius: 5px;
+  width: 5rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  background-color: #FFFFFF;
+}
+
+.container .feedback__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .page-not-found__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .page-not-found__section .page-not-found__section--msg {
+  padding: 0 1.5rem;
+}
+
+.container .page-not-found__section .page-not-found__section--back-link {
+  margin-top: 1rem;
+}
+
+.container .page-not-found__section .page-not-found__section--back-link a {
+  text-decoration: none;
+  color: blue;
+}
+/*# sourceMappingURL=style.css.map */

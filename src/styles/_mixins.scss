@@ -1,0 +1,10 @@
+/* Flexbox */
+@mixin displayFlexCenter()
+{
+    display: flex;
+	justify-content: center;
+}
+@mixin displayFlexColumn() {
+    display: flex;
+    flex-direction: column;
+}
