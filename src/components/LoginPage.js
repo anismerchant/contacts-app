@@ -5,12 +5,12 @@ import { beginLogin } from '../actions/auth';
 // de-structured props
 export const LoginPage = ({beginLogin}) => (
     <div className="login">
-        <div className="login--box">    
-            <h1 className="login--tagline">Build Your Contacts</h1>
-            <button 
-                className="login--button" 
-                onClick={beginLogin}
-            >Login with Google</button>
+        <div className="login--box">
+            <h1 className="login--title">Contacts App</h1>    
+            <p className="login--tagline">Build Your Contacts</p>
+            <div className="login--button-container">
+                <button className="login--button" onClick={beginLogin}>Login with Google</button>
+            </div>
         </div>
     </div>
 );
