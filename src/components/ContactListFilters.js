@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { setNameFilter, sortByFirstName, sortByLastName } from '../actions/filters';
 
 const ContactListFilters = (props) => (
-    <div>
+    <div className="contactlist--filters">
         <input 
             type="text" 
             placeholder="Search"
@@ -21,9 +21,9 @@ const ContactListFilters = (props) => (
                 } 
             }}
         >   
-            <option value="" disabled>Sort by</option>
-            <option value="firstname">First Name</option>
-            <option value="lastname">Last Name</option>
+            <option className="contactlist--sortby" value="" disabled>Sort by</option>
+            <option className="contactlist--firstname" value="firstname">First Name</option>
+            <option className="contactlist--lastname" value="lastname">Last Name</option>
         </select>
     </div>
 

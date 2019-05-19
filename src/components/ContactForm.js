@@ -42,13 +42,14 @@ class ContactForm extends Component {
                 cell: this.state.cell
             })
         }
-
     }
     render() {
         return (
-            <div>
-                {this.state.error && <p>{this.state.error}</p>}
-                <form onSubmit={this.onSubmit}>
+            <div className="form--data">
+                <div className="form--msg">
+                    {this.state.error && <p>{this.state.error}</p>}
+                </div>
+                <form onSubmit={this.onSubmit}> 
                     <input 
                         type="text"
                         placeholder="First Name"
@@ -56,6 +57,7 @@ class ContactForm extends Component {
                         autoFocus
                         value={this.state.firstname}
                         onChange={this.onFirstnameChange}
+                        className="form-firstname"
                     />
                     <input 
                         type="text"
@@ -63,6 +65,7 @@ class ContactForm extends Component {
                         id="lastname"
                         value={this.state.lastname}
                         onChange={this.onLastnameChange}
+                        className="form-lastname"
                     />
                     <input 
                         type="text"
@@ -72,6 +75,7 @@ class ContactForm extends Component {
                         title="Invalid email address." 
                         value={this.state.email}
                         onChange={this.onEmailChange}
+                        className="form-email"
                     />
                     <input 
                         type="tel"
@@ -80,8 +84,9 @@ class ContactForm extends Component {
                         pattern="^\d{3}-\d{3}-\d{4}$" 
                         value={this.state.cell}
                         onChange={this.onCellChange}
+                        className="form-cell"
                     />
-                    <button>Add Contact</button>
+                    <button className="form-button">Add Contact</button>
                 </form>
             </div>
         );

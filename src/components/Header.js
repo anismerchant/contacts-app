@@ -6,11 +6,17 @@ import { beginLogout } from '../actions/auth';
 // de-structured props
 export const Header = ({beginLogout}) => (
     <header>
-        <h1> Contacts App</h1>
-        <NavLink to='/dashboard'>Dashboard</NavLink>
-        <NavLink to='/add'>Add Contact</NavLink>
-        <NavLink to='/feedback'>Feedback</NavLink>
-        <button onClick={beginLogout}>Logout</button>
+        <div className= "header--logo-area">
+            <div className= "header--logo">
+                <h2>Contacts App</h2>
+            </div>
+            <div className="header--logout" onClick={beginLogout}>Logout</div>
+        </div>
+        <div className="header--menu">
+            <NavLink activeClassName="selected" className="header--dashboard" to='/dashboard'>Dashboard</NavLink>
+            <NavLink activeClassName="selected" className="header--add-contact"to='/add'>Add Contact</NavLink>
+            <NavLink activeClassName="selected" className="header--feedback" to='/feedback'>Feedback</NavLink>
+        </div>
     </header>
 );
 

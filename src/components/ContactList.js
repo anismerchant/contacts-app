@@ -5,9 +5,13 @@ import findContacts from '../selectors/findContacts';
 
 // de-structured props
 const ContactList = ({contacts}) => (
-    <div>
-        {contacts.length}
-        {contacts.map((contact) => <ContactListPerson key={contact.id} {...contact} />)}
+    <div className="contactlist__container">
+        <div className="contact--stats">
+            {'You have a total'}<span className="contact--number"> {contacts.length} {'people'}</span>{' in your contact list.'}
+        </div>
+        <div className = "contact__cards">
+            {contacts.map((contact) => <ContactListPerson key={contact.id} {...contact} />)}
+        </div>
     </div>
 );
 

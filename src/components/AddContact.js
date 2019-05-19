@@ -5,8 +5,8 @@ import { beginAddContact }  from '../actions/contacts'
 
 export const AddContact = (props) => {
     return (
-        <div>
-            <h3>Add Contact</h3>
+        <div className="form__section">
+            <h5>Build Your Contact List</h5>
             <ContactForm 
                 onSubmit={ (contact) => {
                     props.dispatch(beginAddContact(contact));

@@ -3,8 +3,8 @@ import ContactList from './ContactList';
 import ContactListFilters from './ContactListFilters';
 
 const ContactDashboard = () => (
-    <div>
-        <h2>Contact List</h2>
+    <div className="contact__section">
+        <h5>Your Contact List</h5>
         <ContactListFilters />
         <ContactList />
     </div>

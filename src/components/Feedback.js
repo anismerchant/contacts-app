@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Feedback = () => (
-    <div>
-        Feedback Page
+    <div className="feedback__section">
+        In Development
     </div>
 );
 

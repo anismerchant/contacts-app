@@ -5,11 +5,17 @@ import { Link } from 'react-router-dom';
 
 // de-structured props
 const ContactListPerson = ({dispatch, id, firstname, lastname, email, cell}) => (
-    <div>
-        <p>{`${firstname} ${lastname} ${email} ${cell}`}</p>
-        <Link to={`/edit/${id}`}><div>Edit</div></Link>
-        <button onClick={ () => {dispatch(beginRemoveContact({id}))
-        }}>Remove</button>
+    <div className = "contact__cards--individual">
+        <h4>{`${firstname} ${lastname}`}</h4>
+        <p>{email}</p>
+        <p>{cell}</p>
+        
+        <div className="contact__cards--actions">
+            <Link to={`/edit/${id}`}><button className="contact__cards--edit">Edit</button></Link>
+            <button className="contact__cards--remove" onClick={ () => {dispatch(beginRemoveContact({id}))
+            }}>Remove</button>
+        </div>
+
     </div>
 );
 

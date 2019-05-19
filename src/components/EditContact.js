@@ -10,7 +10,7 @@ export class EditContact extends Component {
     }
     render() {
             return (
-                <div>
+                <div class="form__section">
                     <ContactForm 
                         contact={this.props.contact}
                         onSubmit={this.onSubmit}
