@@ -10,7 +10,7 @@ export const Header = ({beginLogout}) => (
             <div className= "header--logo">
                 <h2>Contacts App</h2>
             </div>
-            <div className="header--logout" onClick={beginLogout}>Logout</div>
+            <button className="header--logout" onClick={beginLogout}>Logout</button>
         </div>
         <div className="header--menu">
             <NavLink activeClassName="selected" className="header--dashboard" to='/dashboard'>Dashboard</NavLink>
