@@ -1,6 +1,6 @@
-export default (contacts, {name, email, cell, sortBy}) => {
+export default (contacts, {name, sortBy}) => {
     return contacts.filter( contact => {
-        // implement search filter for only firstname and lastname
+        // implement search filter for only firstname and lastname for now
         const firstnameMatch = contact.firstname.toLowerCase().includes(name.toLowerCase());
         const lastnameMatch = contact.lastname.toLowerCase().includes(name.toLowerCase());
         return firstnameMatch || lastnameMatch;
