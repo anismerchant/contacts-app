@@ -14,5 +14,4 @@ const store = createStore(combineReducers({
     composeEnhancers(applyMiddleware(thunk)),
 );
 
-console.log(store.getState());
 export default store;
