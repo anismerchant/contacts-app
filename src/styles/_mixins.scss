@@ -8,3 +8,10 @@
     display: flex;
     flex-direction: column;
 }
+@mixin displayFlexRow() {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Media Queries */
+$mobile-max-width: 800px;

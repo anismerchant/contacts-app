@@ -89,7 +89,7 @@
             align-items: center;
 
             .header--logo {
-                margin-right: 7rem;
+                margin-right: 4.2rem;
 
                 h2 {
                     font-size: 1.2rem;
@@ -112,7 +112,7 @@
         .header--menu {
             @include displayFlexCenter();
             border-bottom: 1px solid black;
-            padding: 1rem 0;
+            padding: 1.5rem 0;
 
             .header--dashboard {
                 margin-right: 1rem;
@@ -216,22 +216,34 @@
 
             // ContactList Component
             .contact--stats {
+                @include displayFlexCenter();
+
                 .contact--number {
                     font-weight: $font-weight-bold;
                     color: $color;
                 }
-                width: 80%;
                 margin: 1rem auto;
             }
             .contact__cards {
-                @include displayFlexColumn();
+                @include displayFlexRow();
+                 flex-wrap: wrap;
+               
+
+                @media (max-width: $mobile-max-width) {
+                    @include displayFlexColumn();
+			        // max-width: 85vw;
+		        }
                 
                 // ContactListPerson Component
                 .contact__cards--individual {
                     border: 1px solid #D4D4D4;
-                    width: 80%;
                     margin: 1rem auto;
                     background-color: $background-color;
+                    flex: 1 0 10%;
+
+                    @media (min-width: $desktop-min-width) {
+                       margin-right: 1rem; 
+                    }
 
                     h4 {
                         padding-top: 0.5rem;
