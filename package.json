@@ -6,6 +6,7 @@
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.0",
     "enzyme-to-json": "^3.3.5",
+    "express": "^4.17.0",
     "firebase": "^6.0.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -16,10 +17,11 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postbuild":"npm run build"
   },
   "jest": {
     "snapshotSerializers": [
