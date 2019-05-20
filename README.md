@@ -1,6 +1,36 @@
+## Overview: Contacts App
+A simple contacts application for managing a list of people and their contact information.
+
+* Add, edit, and remove contacts
+* Search filter to easily find contacts
+* Sort by first or last name
+* Authenticate users & allow them to create their own lists
+
+Try it out: https://bit.ly/2Ht6mVA
+**please wait about 15 seconds for the servers to spin up.
+
+## Technology Stack
+
+* React/Redux
+* Node/Express
+* Jest/Enzyme (for testing)
+* Firebase Database
+* Google Authentication
+* HTML/SCSS/CSS/BEM
+
+## Screenshots
+
+![contacts-app-mobile](https://user-images.githubusercontent.com/5770541/58048881-98d4ea00-7b19-11e9-813c-1be1de091dc7.png)
+
+![contacts-app-desktop-2](https://user-images.githubusercontent.com/5770541/58063085-b8383b00-7b4a-11e9-84b9-08f9dce6259c.png)
+
+![contacts-app-desktop](https://user-images.githubusercontent.com/5770541/58063086-ba01fe80-7b4a-11e9-9f3f-55b901ccd4c1.png)
+
+## Other Details
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
