@@ -11,6 +11,6 @@ beforeEach( () => {
     wrapper = shallow(<AddContact beginAddContact={beginAddContact} history = {history} />)
 });
 
-test('This should correctly render AddContact component correnctly.' , () => {
+test('This should correctly render AddContact component.' , () => {
     expect(wrapper).toMatchSnapshot();
 });
