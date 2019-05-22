@@ -381,7 +381,7 @@ table {
 
 @media (min-width: 800px) {
   .container .contact__section .contactlist__container .contact__cards .contact__cards--individual {
-    margin-right: 1rem;
+    margin: 1rem 1rem;
   }
 }
 
