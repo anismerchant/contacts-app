@@ -24,7 +24,7 @@ Try it out: https://bit.ly/2Ht6mVA
 
 ![contacts-app-desktop-2](https://user-images.githubusercontent.com/5770541/58063085-b8383b00-7b4a-11e9-84b9-08f9dce6259c.png)
 
-![contacts-app-desktop](https://user-images.githubusercontent.com/5770541/58063086-ba01fe80-7b4a-11e9-9f3f-55b901ccd4c1.png)
+![contacts-app-desktop](https://user-images.githubusercontent.com/5770541/58140789-a4eea380-7c0e-11e9-8bdb-d4f3bdf499e4.png)
 
 ## Other Details
 
