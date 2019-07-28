@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { beginLogout } from '../actions/auth';
+import { beginLogout } from '../actions';
 
 // de-structured props
 export const Header = ({beginLogout}) => (

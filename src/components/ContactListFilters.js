@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setNameFilter, sortByFirstName, sortByLastName } from '../actions/filters';
+import { setNameFilter, sortByFirstName, sortByLastName } from '../actions';
 
 const ContactListFilters = (props) => (
     <div className="contactlist--filters">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { beginRemoveContact } from '../actions/contacts';
+import { beginRemoveContact } from '../actions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 

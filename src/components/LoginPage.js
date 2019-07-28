@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { beginLogin } from '../actions/auth';
+import { beginLogin } from '../actions';
 
 // de-structured props
 export const LoginPage = ({beginLogin}) => (

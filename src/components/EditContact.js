@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { beginEditContact } from '../actions/contacts';
+import { beginEditContact } from '../actions';
 import ContactForm from './ContactForm';
 
 export class EditContact extends Component {
