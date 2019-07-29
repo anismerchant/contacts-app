@@ -1,6 +1,6 @@
 const appAuthReducerDefaultState = {};
 
-const appAuthReducer = (state = appAuthReducerDefaultState, action) => {
+export const appAuthReducer = (state = appAuthReducerDefaultState, action) => {
     switch (action.type) {
         case 'LOGIN':
             return {
@@ -12,5 +12,3 @@ const appAuthReducer = (state = appAuthReducerDefaultState, action) => {
             return state;
     }
 }
-
-export default appAuthReducer;

@@ -5,7 +5,7 @@ const filtersReducerDefaultState = {
     sortBy: ''
 };
 
-const filtersReducer = (state = filtersReducerDefaultState, action) => {
+export const filtersReducer = (state = filtersReducerDefaultState, action) => {
     switch (action.type) {
         case 'SET_NAME_FILTER':
             return {
@@ -26,5 +26,3 @@ const filtersReducer = (state = filtersReducerDefaultState, action) => {
             return state;
     }
 };
-
-export default filtersReducer;
